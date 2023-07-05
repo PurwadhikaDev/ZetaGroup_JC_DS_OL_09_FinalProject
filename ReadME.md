@@ -7,7 +7,7 @@ Created By:
 
 Business Problem Understanding
 ------------------------------------------------------------------------------------
-**Context**
+**Context**<br>
 Berdasarkan data Portuguese Banking Association, diketahui bahwa industri perbankan Portugal mengalami peningkatan saldo deposito. Hal ini membuat rasio pinjaman terhadap deposito atau biasa disebut dengan LDR (Loan to Deposit Ratio) mengalami penurunan. Dikutip dari Stephen Buschbom dalam Assessing Bank Risk Using the Loan-to-Deposit Ratio, diketahui bahwa LDR sering digunakan sebagai indikator tingkat risiko bank, dimana rasio yang tinggi menunjukkan bahwa bank mengambil lebih banyak risiko karena memiliki cadangan kas yang lebih sedikit untuk menutupi kerugian yang tidak terduga.
 
 Data peforma industri Bank Portugal ini menyoroti kondisi yang menguntungkan dalam sektor industri perbankan karena LDR-nya yang mengalami penurunan, hal ini menunjukkan bahwa bank-bank Portugal telah memperkuat posisi likuiditas-nya sehingga level risikonya menjadi lebih rendah dari sebelumnya dan dapat memainkan peran penting dalam mendukung perekonomian. Hal ini memungkinkan bank-bank untuk meningkatkan kemampuan mereka dalam menyediakan pinjaman kepada individu, bisnis, dan sektor-sektor lain dalam perekonomian. Ketersediaan likuiditas yang cukup dapat membantu dalam mendorong aktivitas ekonomi yang sehat, seperti investasi, konsumsi, dan pertumbuhan bisnis.
@@ -25,39 +25,39 @@ Berdasarkan standar quality management ISO 9001: 2015 pada klausa 6, perusahaan 
 
 Maka dapat diketahui bahwa masalah lain yang perlu dianalisa adalah "Bagaimana bank (khususnya tim management risiko) dapat memprediksi nasabah akan melakukan deposito atau tidak untuk menjaga stabilitas LDR (Loan to Deposit Ratio)?"
 
-Target:
-0 : Nasabah tidak melakukan deposito
-1 : Nasabah melakukan deposito
+Target: <br>
+0 : Nasabah tidak melakukan deposito<br>
+1 : Nasabah melakukan deposito<br>
 
-**Goals**
-Sebagaimana dalam menghadapi tantangan tersebut, maka project ini memiliki tujuan untuk dapat memberikan rekomendasi dengan memanfaatkan machine learning kepada stakeholder sebagai berikut:
+**Goals**<br>
+Sebagaimana dalam menghadapi tantangan tersebut, maka project ini memiliki tujuan untuk dapat memberikan rekomendasi dengan memanfaatkan machine learning kepada stakeholder sebagai berikut:<br>
 
 1. Tim marketing perlu memprediksi kemungkinan seorang nasabah dalam merespon kampanye pemasaran deposito. Sehingga tim marketing dapat mengoptimalkan biaya pemasaran dengan lebih efisien.
 2. Dalam upaya mempertahankan peforma bank, tim management risiko perlu memprediksi kemunkinan nasabah akan melakukan deposito atau tidak. Sehingga top management dapat membuat strategi kebijagan yang matang lebih awal.
 3. Berkaitan dalam analisa masalah tersebut, maka perlu dianalisa untuk mengetahui faktor / variable apa yang membuat seorang nasabah melakukan deposito pada bank. Sehingga tim marketing dan management risiko dapat membuat rencana yang lebih baik dalam pendekatan ke potensial nasabah yang melakukan deposito dan memitigasi kemungkinan jumlah deposito yang turun
 
-**Analytics Approach**
+**Analytics Approach**<br>
 Jadi yang akan dilakukan dalam project ini adalah menganalisis data untuk menemukan pola yang membedakan nasabah yang melakukan deposito dan yang tidak melakukan deposito.
 
 Kemudian dalam project ini akan membangun model klasifikasi yang akan membantu tim marketing bank untuk dapat memprediksi probabilitas seorang nasabah yang akan/ingin melakukan deposito di bank tersebut atau tidak.
 
-**Metric Evaluation**
-	        | N-Prediction |  P-Prediction |
---- | --- | --- |
-N-Actual  | TN	         |  FP |
-P-Actual  | FN	         |  TP |
+**Metric Evaluation**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| N-Prediction |  P-Prediction | <br>
+----------|----------------|----------------| <br>
+N-Actual  | TN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|  FP &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <br>
+P-Actual  | FN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|  TP &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <br>
 
-FN (False Negative) : Model salah memprediksi bahwa seorang nasabah tidak akan melakukan deposito, padahal sebenarnya nasabah tersebut akan melakukan deposito
---> Konsekuensi : Bank kehilangan peluang untuk menarik nasabah potensial yang sebenarnya akan merespons positif terhadap kampanye.
+FN (False Negative) : Model salah memprediksi bahwa seorang nasabah tidak akan melakukan deposito, padahal sebenarnya nasabah tersebut akan melakukan deposito<br>
+--> Konsekuensi : Bank kehilangan peluang untuk menarik nasabah potensial yang sebenarnya akan merespons positif terhadap kampanye.<br>
 
-FP (False Positive) : Model salah memprediksi bahwa seorang nasabah akan melakukan deposito, padahal sebenarnya nasabah tidak akan melakukan deposito
---> Konsekuensi : Bank mengalokasikan sumber daya tambahan kepada nasabah yang sebenarnya tidak berminat
+FP (False Positive) : Model salah memprediksi bahwa seorang nasabah akan melakukan deposito, padahal sebenarnya nasabah tidak akan melakukan deposito<br>
+--> Konsekuensi : Bank mengalokasikan sumber daya tambahan kepada nasabah yang sebenarnya tidak berminat<br>
 
-TN (True Negative) : Seorang nasabah tidak akan melakukan deposito dan sebenarnya nasabah tersebut memang tidak akan melakukan deposito
---> Manfaat : Bank menghindari pengeluaran yang tidak perlu dan menghemat sumber daya untuk nasabah yang tidak berminat atau tidak akan merespons positif
+TN (True Negative) : Seorang nasabah tidak akan melakukan deposito dan sebenarnya nasabah tersebut memang tidak akan melakukan deposito<br>
+--> Manfaat : Bank menghindari pengeluaran yang tidak perlu dan menghemat sumber daya untuk nasabah yang tidak berminat atau tidak akan merespons positif<br>
 
-FP (True Positive) : Seorang nasabah akan melakukan deposito dan sebenarnya nasabah tersebut memang akan melakukan deposito.
---> Manfaat : Bank berhasil menarik nasabah yang berpotensi merespons positif dan berkontribusi pada pendapatan dan pertumbuhan bisnis.
+FP (True Positive) : Seorang nasabah akan melakukan deposito dan sebenarnya nasabah tersebut memang akan melakukan deposito.<br>
+--> Manfaat : Bank berhasil menarik nasabah yang berpotensi merespons positif dan berkontribusi pada pendapatan dan pertumbuhan bisnis.<br>
 
 Berdasarkan tujuan dari project untuk memprediksi sebanyak - banyaknya nasabah mana yang akan melakukan deposito (TP) dan yang tidak (TN), maka metric utama yang akan digunakan adalah **accuracy**.
 
@@ -109,7 +109,7 @@ Langkah-langkah yang dilakukan dalam EDA adalah:
 3. Checking 'Unknown' Value Distribution
 4. Checking Data Proportion
 5. Checking Numerical Data Distribution
-6. Checking COrrelation
+6. Checking Correlation
 7. EDA Summary
 
 
@@ -124,7 +124,7 @@ Langkah-langkah yang dilakukan dalam preprocessing adalah:
 
 Data Analysis
 ------------------------------------------------------------------------------------
-**A. Latar Belakang Nasabah**
+**A. Latar Belakang Nasabah**<br>
 Dalam upaya memprediksi nasabah melakukan deposito atau tidak, diperlukan analisa lebih lanjut untuk mengetahui latar belakang nasabah seperti apa yang melakukan deposito. Berkaitan dengan hal tersebut, maka diketahui insight sebagai berikut:
    1. Diketahui bahwa fitur (age, job, marital, education) dapat dijadikan referensi untuk mengetahui nasabah melakukan deposito atau tidak.
    2. Diharapkan tim marketing dapat membuat strategi pemasaran sesuai dengan preferensi segmen nasabah yang minimal memiliki salah satu kategori berikut
@@ -135,8 +135,9 @@ Dalam upaya memprediksi nasabah melakukan deposito atau tidak, diperlukan analis
       e. Peluang lain yang dapat dioptimalkan adalah membuat program marketing untuk fokus meningkatkan jumlah nasabah dengan status 'single' karena persentasenya untuk melakukan deposito lebih tinggi
       f. education (university karena jumlah dan persentase melakukan deposit tinggi). Strategi dapat memposisikan bank sebagai penasihat tepercaya yang diharapkan dapat membantu menarik dan mempertahankan deposito mereka.
    3. Diharapkan tim risk management dapat berkolaborasi dengan tim marketing dalam penyesuaian tidak hanya melakukan pendekatan ke segmen tersebut agar tidak ketergantungan karena dapat membahayakan perusahaan. Tim risk management juga harus mempertimbangkan mitigasi nasabah yang memiliki 'unknown'value karena ketidakpastian identifikasi background mereka
-   4. Fitur (housing, loan, default) memiliki korelasi yang lemah dalam keputusan nasabah melakukan deposito (kolom y), namun fitur ini tetap dapat dipertimbangkan sebagai tambahan fitur model dalam memprediksi keputusan nasabah melakukan deposito.
-**B. Marketing Campaign**
+   4. Fitur (housing, loan, default) memiliki korelasi yang lemah dalam keputusan nasabah melakukan deposito (kolom y), namun fitur ini tetap dapat dipertimbangkan sebagai tambahan fitur model dalam memprediksi keputusan nasabah melakukan deposito.<br><br>
+   
+**B. Marketing Campaign**<br>
 Proses yang perlu dipertimbangkan dalam memprediksi nasabah akan melakukan deposito adalah analisa marketing campaign. Maka akan dilakukan analisa untuk menjawab pertanyaan berikut.
    1. Diketahui bahwa fitur (contact, month, poutcome) dapat dijadikan referensi untuk mengetahui nasabah melakukan deposito atau tidak.
    2. Fitur day_of_week dapat dipertimbangkan untuk dimasukan dalam model.
@@ -148,8 +149,9 @@ Proses yang perlu dipertimbangkan dalam memprediksi nasabah akan melakukan depos
    4. Tim risk mangement dapat menyusun terkait mitigasi berikut:
     a. Penilaian risiko menyeluruh terhadap aktivitas pemasaran seluler, dengan mempertimbangkan potensi kerentanan keamanan, dan masalah privasi data
     b. Persiapkan rencana darurat untuk mengatasi setiap lonjakan permintaan, memastikan sumber daya dan infrastruktur yang memadai untuk menangani permintaan dan transaksi pelanggan yang meningkat
-**C. Social & Economic Context**
-Faktor sosial dan ekonomi mungkin dapat memengaruhi selera risiko individu, yang memengaruhi keputusan mereka terkait penempatan deposito. Maka akan dilakukan analisa untuk menjawab pertanyaan berikut.
+
+**C. Social & Economic Context**<br><br>
+Faktor sosial dan ekonomi mungkin dapat memengaruhi selera risiko individu, yang memengaruhi keputusan mereka terkait penempatan deposito. Maka akan dilakukan analisa untuk menjawab pertanyaan berikut.<br>
    1. Dari analisa korelasi yang diberikan menunjukkan bahwa faktor-faktor seperti index harga konsumen yang lebih tinggi (cons.conf.idx), pasar kerja yang memburuk (emp.var.rate), suku bunga yang lebih rendah (euribor3m), dan pasar kerja yang melemah (nr.employed) terkait dengan kemungkinan penurunan nasabah membuat deposit. Namun perlu dipertimbangkan bahwa korelasi tersebut lemah, maka diperlukan fitur tambahan dalam model machine learning nantinya.
 
 
@@ -173,28 +175,21 @@ Methodology
       Pada teknik ini, digunakan untuk mencari feature importance pada dataset.
 
 
-Conclusion dan Recommendation
+Conclusion dan Recommendation<br>
 ------------------------------------------------------------------------------------
-**Conclusion**
-| | Accuracy with Train | Accuracy with Test | True Negative | True Positive | False Negative | False Positive 
-| --- | --- | --- |
-| First Model | 92% | 92% | 7063 | 489 | 439 | 245
-| Model Feature with Feature Selection | 92% | 92% | 7071 | 474 | 454 | 237
-| Model Feature with Feature Selection + Tuning | 92% | 92% | 7077 | 493 | 435 | 231
-| | Same % between train and test is better | More is better | Less is better
-
+**Conclusion**<br>
 Diketahui bahwa model dengan feature selection + tuning memiliki performa yang lebih baik dari segala aspek, maka model tersebut adalah model final yang akan digunakan.
 
-**Recommendation**
-For Model: 
+**Recommendation**<br>
+For Model: <br>
 1. Melakukan tuning parameter yang lebih banyak pada model yang digunakan. Dengan mengeksplorasi berbagai kombinasi parameter, dapat meningkatkan performa dan akurasi model prediksi.
 2. Penambahan fitur baru seperti waktu nasabah mendaftar di bank yang memungkinkan melihat hubungan lamanya nasabah menabung dan keputusan deposit
 3. Tim marketing dapat mengushakan perolehan data yang lengkap tanpa nilai 'unknown' untuk meminimalisir interpetasi terutama pada kolom default
 
-For Team Marketing:
+For Team Marketing:<br>
 Berkaitan dengan pengaruh duration yang sangat kuat dalam keputusan pelanggan melakukan deposit, tim marketing perlu lebih dalam untuk menganalisis perjalanan pelanggan dari titik kontak awal hingga selesai kontak. Identifikasi potensi kendala atau area di mana pelanggan berhenti selama proses berlangsung. Proses kontak pelanggan yang lancar dan efisien dapat meningkatkan tingkat konversi dan mendorong lebih banyak pelanggan untuk melakukan deposit sehingga perolehan deposito lebih optimal.
 
-For Team Risk Management: 
+For Team Risk Management: <br>
 Secara teratur memantau kondisi ekonomi termasuk tingkat penduduk yang memiliki pekerjaan dan tingkat 3 bulan Euribor. Identifikasi tren dan perubahan undustri dan suku bunga serta potensi dampaknya terhadap perilaku pelanggan
 
 Hal ini untuk membuat keputusan yang tepat dan mengembangkan strategi yang selaras dengan kondisi ekonomi yang berlaku untuk mempertahanka performa LDR (Loan to Deposit)
