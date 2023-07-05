@@ -16,7 +16,7 @@ Hal ini menunjukkan bahwa deposito merupakan salah satu sumber dana yang penting
 
 Mempertimbangkan pertumbuhan deposito yang terus berlanjut, tentunya risiko penurunan deposito akan tetap ada. Oleh karena itu penting bagi bank untuk memprediksi apakah nasabah akan melakukan deposito atau tidak. Prediksi ini sangat penting karena berpotensi berdampak pada keseluruhan operasional dan keberhasilan bank dalam memitigasi risiko hal yang tak terduga.
 
-**Problem Statement**
+**Problem Statement** <br>
 Dikutip dari berbagai sumber pada expatica, diketahui ada lebih dari 150 bank di Portugal. Meskipun jumlah cabang bank fisik di Portugal menurun selama dekade terakhir, masih ada sekitar 32,8 cabang per 100.000 penduduk. Dimana itu hampir tiga kali lipat rata-rata global. Tentunya hal ini menjadikan persaingan industri perbankan di Portugal semakin kompetitif. Untuk menjawab tantangan tersebut, maka penting bagi tim marketing untuk dapat mengalokasikan sumber daya dengan lebih efisien agar dapat memperoleh hasil yang optimal.
 
 Dari uraian diatas, diketahui bahwa masalah yang perlu dianalisa adalah "Pelanggan seperti apa yang harus tim marketing bank targetkan untuk memaksimalkan perolehan deposito?"
